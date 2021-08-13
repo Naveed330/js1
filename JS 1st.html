@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <script>
+
+            let city = ["Rawalpindi","Faisalabad","Multan"];
+            for (let character of city){
+                console.log(character);
+            }
+            function Abc () {
+               var marks = document.getElementById("fill").value;
+               var result ;
+               if (marks == ""){
+                alert("Please enter your marks");
+               } 
+               else {
+
+                if(marks > 80){
+                result = ("Grade A+");
+              }else if (marks > 70 && marks <= 80 ){
+                result = ("Grade A");
+              }
+              else if (marks > 60 && marks <= 70 ){
+                result = ("Grade B");
+              }
+              else if (marks >= 50 && marks <= 60 ){
+                result = ("Grade C");
+              }
+              else {
+                result = ("Grade F");
+              }
+              document.getElementById("result").innerHTML=result;
+                document.getElementById("clear1").style.visibility="visible"
+                document.getElementById("result").style.fontSize = "100px" ;
+               }
+
+            }
+           function clear1 (){
+            document.getElementById("result").style.fontSize = "30px" ;
+            document.getElementById('result').innerHTML = "0";
+            document.getElementById('fill').value='';
+            document.getElementById("clear1").style.visibility="hidden"
+           }
+        </script>
+    
+    </head>
+    <body>
+     Enter Your Marks <input type="number" name="" id="fill"> <br><br>
+    
+      <button onclick="Abc()">Add</button>
+      <button onclick="clear1()" id="clear1" style="visibility: hidden;">Clear Field</button>
+      <h1 id="result">0</h1>
+     
+    </body>
+</html>
